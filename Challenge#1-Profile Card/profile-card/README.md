@@ -68,3 +68,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+```JavaScript
+function Skill({skill, color,level}){
+  return(
+<div className="skill" style={{backgroundColor:color}}>
+<span>{skill}</span>
+<span>
+  {level === "beginner" && "👶"}
+  {level === "intermediate" && "👍"}
+  {level === "advanced" && "💪"}
+{/* Not: 
+{condition && <Component />}
+Bu yapıda, condition bir koşul ifadesidir. 
+Eğer bu koşul doğruysa (true ise), <Component /> bileşeni render edilir. 
+Eğer koşul yanlışsa (false ise), <Component /> bileşeni render edilmez. */}
+
+  </span>
+</div>
+  );
+}
+```
